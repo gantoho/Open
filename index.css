@@ -24,9 +24,10 @@ section span{
 	position: relative;
 	margin-right: 5px;
 	margin-bottom: 10px;
-	padding: 1px 4px;
+	padding: 4px 16px;
 	border-radius: 4px;
 	transition: all .5s;
+	font-size: 30px;
 }
 section span:hover{
 	background-color: #0000FF;
