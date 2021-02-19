@@ -51,7 +51,7 @@ section span a{
 	left: 0;
 }
 main footer{
-	background: floralwhite;
+    	border: 2px solid aliceblue;
 	padding: 10px 20px;
 	border-radius: 4px;
 }
