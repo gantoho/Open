@@ -51,11 +51,8 @@ section span a{
 	left: 0;
 }
 main footer{
-	height: 40px;
 	background: floralwhite;
-	padding: 0px 20px;
-	display: flex;
-	align-items: center;
+	padding: 10px 20px;
 	border-radius: 4px;
 }
 footer span{
