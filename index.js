@@ -17,6 +17,7 @@ $(function(){
 		console.log(lastDate);
 		localStorage.setItem("lastDate", lastDate);
 		$(".lastDate b").html(localStorage.getItem("lastDate"));
+		alert(1);
 	})
 	
 	
