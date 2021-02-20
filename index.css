@@ -70,3 +70,9 @@ footer span:nth-child(1){
 footer span:nth-child(2){
 	background-color: bisque;
 }
+.lastDate{
+	border: 2px solid bisque;
+}
+.lastDate b{
+	font-weight: 400;
+}
