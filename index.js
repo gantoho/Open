@@ -5,11 +5,9 @@ $.getJSON('index.json', data=>{
 })
 $(".lastDate b").html(localStorage.getItem("lastDate"));
 $(function(){
-	setInterval(function(){
 		$("section span").click(function(){
 			var lastDate = $(this).children("i").html();
 			localStorage.setItem("lastDate", lastDate);
 			$(".lastDate b").html(localStorage.getItem("lastDate"));
 		})
-	},1000)
 })
