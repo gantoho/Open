@@ -7,12 +7,6 @@
 	$(".lastDate b").html(localStorage.getItem("lastDate"));
 })();
 $(function(){
-	
-	$("section").slideUp();
-	$("footer").click(function(){
-		$("section").stop().slideToggle();
-	})
-	
 	$("section span").click(function(){
 		var lastDate = $(this).children("i").html();
 		localStorage.setItem("lastDate", lastDate);
