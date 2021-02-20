@@ -10,7 +10,7 @@ $(function(){
 	
 	$("section").slideUp();
 	$("footer").click(function(){
-		$("section").slideToggle();
+		$("section").stop().slideToggle();
 	})
 	
 	$("section span").click(function(){
