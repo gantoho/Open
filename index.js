@@ -14,6 +14,7 @@ $(function(){
 	
 	$("section span").click(function(){
 		var lastDate = $(this).children("i").html();
+		console.log(lastDate);
 		localStorage.setItem("lastDate", lastDate);
 		$(".lastDate b").html(localStorage.getItem("lastDate"));
 	})
