@@ -30,7 +30,7 @@ section span{
 	font-size: 30px;
 }
 section span:hover{
-	background-color: #0000FF;
+	background-color: violet;
 	color: white;
 }
 section .k{
