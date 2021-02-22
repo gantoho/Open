@@ -27,7 +27,7 @@ section span{
 	padding: 4px 16px;
 	border-radius: 4px;
 	transition: all .5s;
-	font-size: 30px;
+	font-size: 20px;
 }
 section span:hover{
 	background-color: violet;
