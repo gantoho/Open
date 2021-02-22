@@ -71,7 +71,7 @@ footer span:nth-child(2){
 	background-color: bisque;
 }
 .lastDate{
-	border: 2px solid #e1e4e8;
+	background: white;
 }
 .lastDate b{
 	font-weight: 400;
