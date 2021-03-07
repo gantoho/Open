@@ -1,0 +1,323 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+::selection{
+	color: white;
+	background: #0CDAB3;
+}
+body{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+.navbar{
+	width: 100%;
+	position: fixed;
+	background: rgba(0,0,0,0);
+	border: 0;
+	z-index: 999;
+}
+.navbar>.container{
+	position: relative;
+}
+.navbar>.container>.navbar-left>button{
+	margin-top: 20px;
+}
+.navbar>.container>.navbar-right{
+	/*box-shadow: 0px 5px 20px rgba(0,0,0,0.2);*/
+}
+.navbar>.container>.navbar-right>ul{
+	margin-top: 10px;
+}
+.navbar>.container>.navbar-right>ul>li{
+	margin: 0 10px;
+}
+.navbar>.container>.navbar-right>ul>li>a{
+	color: white;
+}
+.navbar>.container>.navbar-right>ul>li>a:hover{
+	color: #0CDAB3;
+}
+.navbar>.container>.navbar-right>ul>li:nth-child(7)>a:hover{
+	color: white;
+}
+.navbar>.container>.navbar-right>ul>li:nth-child(7):hover{
+	background: #09D0AA;
+}
+.navbar>.container>.navbar-right>ul>.xzapp{
+	text-align: center;
+	border-radius: 5px;
+	background: #0CDAB3;
+}
+@media (max-width: 768px){
+	.one>.container>.row:nth-child(2){
+		display: none;
+	}
+	.one>.container>.row:nth-child(3){
+		display: block;
+	}
+	.one>.container>.row:nth-child(1)>div>h1{
+		font-size: 25px;
+	}
+}
+@media (min-width: 768px){
+	.one>.container>.row:nth-child(2){
+		display: block;
+	}
+	.one>.container>.row:nth-child(3){
+		display: none;
+	}
+}
+.logo{
+	width: 194px;
+	height: 70px;
+	background: url(../img/logo.png)no-repeat;
+	background-position: center;
+}
+.logo1{
+	width: 194px;
+	height: 70px;
+	display: none;
+	background: url(../img/logo1.png)no-repeat;
+	background-position: center;
+}
+.logo1>img{
+	width: 100%;
+	height: 100%;
+}
+.one{
+	width: 100%;
+	height: 100%;
+	background: url(../img/header-bg1.jpg)no-repeat;
+	background-position: center;
+	overflow: hidden;
+}
+.one>.container{
+	position: relative;
+	top: 200px;
+	color: white;
+	text-align: center;
+}
+.one>.container>.row:nth-child(1)>div>em{
+	font-size: 18px;
+	position: relative;
+	top: 20px;
+}
+.one>.container>.row:nth-child(2){
+	position: relative;
+	top: 120px;
+}
+.one>.container>.row:nth-child(2)>div>p{
+	height: 26px;
+	margin: 30px 0px;
+	font-size: 18px;
+	
+	overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+.one>.container>.row:nth-child(2)>div>button{
+	width: 300px;
+	height: 70px;
+	font-size: 20px;
+	position: relative;
+}
+.one>.container>.row:nth-child(2)>div>button>span{
+	display: inline-block;
+	width: 300px;
+	height: 300px;
+	background: url(../img/qrcode.jpg)no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	top: -300px;
+	left: 0px;
+	display: none;
+}
+.one>.container>.row:nth-child(2)>div>button:hover>span{
+	display: block;
+}
+
+
+.one>.container>.row:nth-child(3){
+	/*display: none;*/
+	position: relative;
+	top: 150px;
+}
+.one>.container>.row:nth-child(3)>div>button{
+	width: 280px;
+	height: 60px;
+	border-radius: 50px;
+	font-size: 20px;
+}
+.section1{
+	width: 100%;
+	padding: 0px 40px;
+}
+.section1>div{
+	cursor: pointer;
+}
+.section1>div>div:nth-child(1){
+	text-align: center;
+	padding: 50px 0;
+}
+.section1>div>div:nth-child(1)>div>h1{
+	color: #3278B4;
+}
+.section1>div>div:nth-child(1)>div>p{
+	color: #606873;
+	font-size: 18px;
+	margin-top: 20px;
+}
+.section1>div>div:nth-child(2){
+	text-align: center;
+}
+.section1>div>div:nth-child(2)>div{
+	padding: 20px;
+}
+.section1>div>div:nth-child(2)>div>img{
+	width: 100%;
+	height: 100%;
+}
+.section1>div>div:nth-child(3){
+	text-align: center;
+	padding: 50px 0;
+}
+.section1>div>div:nth-child(3)>div>button{
+	border: 1px solid #F44E51;
+	background: rgba(0,0,0,0);
+	color: red;
+	transition: all 0.4s;
+	font-size: 12px;
+	padding: 10px 20px;
+}
+.section1>div>div:nth-child(3)>div>button:hover{
+	background: #F44E51;
+	color: white;
+}
+.section2{
+	width: 100%;
+	background: url(../img/good_bg1.jpg)no-repeat;
+	background-position: center;
+	background-size: auto 100%;
+}
+.section2>div>div:nth-child(1){
+	text-align: center;
+	color: white;
+	margin-top: 50px;
+	padding-top: 30px;
+}
+.section2>div>div:nth-child(1)>div>p{
+	font-size: 18px;
+	margin-top: 20px;
+}
+.section2>div>div:nth-child(2){
+	margin-top: 50px;
+	padding-bottom: 70px;
+}
+.section2>div>div:nth-child(2)>div{
+	text-align: center;
+	padding: 40px;
+}
+.section2>div>div:nth-child(2)>div>img{
+	border: 10px solid rgba(255,255,255,0.3);
+	border-radius: 50%;
+	width: 100%;
+}
+.section2>div>div:nth-child(2)>div>p{
+	font-size: 25px;
+	color: white;
+	margin-top: 30px;
+}
+.section3{
+	width: 100%;
+	padding: 70px 0;
+}
+.section3>div>div>div{
+	padding: 20px 20px;
+}
+.section3>div>div>div>img{
+	width: 100%;
+}
+.section3>div>div>div>div{
+	width: 100%;
+	height: 50px;
+	border-left: 1px solid gainsboro;
+	border-right: 1px solid gainsboro;
+	border-bottom: 1px solid gainsboro;
+	border-radius: 0px 0px 5px 5px;
+	line-height: 50px;
+	position: relative;
+	cursor: pointer;
+}
+.section3>div>div>div>div:hover{
+	color: #0CDAB3;
+}
+.section3>div>div>div>div>font{
+	padding-left: 20px;
+}
+.section3>div>div>div>div>i{
+	padding-right: 20px;
+	position: absolute;
+	right: 0;
+}
+.section4{
+	background: url(../img/bg.png)repeat-x;
+}
+.section4>div>div>div{
+	text-align: center;
+}
+.section4>div>div>div>p{
+	font-size: 35px;
+	margin-top: 70px;
+	margin-bottom: 40px;
+}
+.section4>div>div>div>button{
+	width: 140px;
+	height: 55px;
+	border-radius: 50px;
+	font-size: 15px;
+	border: 0;
+	background: #36D678;
+	margin-bottom: 70px;
+}
+.section4>div>div>div>button>a{
+	color: white;
+	text-decoration: none;
+}
+.foot{
+	width: 100%;
+	background: #36414E;
+	margin: 0;
+}
+.foot>div>div{
+	text-align: center;
+}
+.foot>div>div>a{
+	display: inline-block;
+	color: #A5B5BE;
+	text-decoration: none;
+	padding: 20px 10px;
+}
+.foot>div>div>p{
+	color: #A5B5BE;
+}
+.foot>div>div>p>span{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url(../img/ghs.png)no-repeat;
+	background-size: 100% 100%;
+}
+.foot>div>div>span{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url(../img/pic1.gif)no-repeat;
+	background-size: 100% 100%;
+}
