@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>小米手环6自定义表盘背景图</title>
 	<style>
 		*{
 			margin: 0;
@@ -71,7 +71,7 @@
 </head>
 <body>
 	<main>
-		<section>
+		<section class="section">
 			<div class="g">Ganto</div>
 			<div class="imgs">
 				<img src="" alt="" id="o1" onerror="this.src='https://icon.ganto.cn/g.png'">
@@ -87,6 +87,7 @@
 		<footer>
 			第一张<input type="file" id="uploadfile1">
 			第二张<input type="file" id="uploadfile2">
+			<span class="screenshot">截图模式</span>
 		</footer>
 		<script>
 			var file1=document.querySelector("#uploadfile1");
@@ -106,6 +107,11 @@
 					console.log(url);
 					document.querySelector("#o2").src = url;
 				}
+			}
+			document.querySelector(".screenshot").onclick = () => {
+				document.querySelector(".section").style.borderRadius = 0;
+				document.querySelector(".section").style.border = 0;
+				document.querySelector(".m").style.display = "none";
 			}
 		</script>
 	</main>
