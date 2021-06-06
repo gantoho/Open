@@ -65,6 +65,19 @@
 		}
 		footer{
 			background-color: #eee;
+			display: flex;
+			justify-content: space-between;
+		}
+		footer label{
+			background-color: greenyellow;
+		}
+		footer .screenshot{
+			cursor: pointer;
+			background-color: greenyellow;
+		}
+		footer .unscreenshot{
+			cursor: pointer;
+			background-color: greenyellow;
 		}
 	</style>
 </head>
@@ -84,9 +97,14 @@
 			<p>思想驱动行为</p>
 		</section>
 		<footer>
-			第一张<input type="file" id="uploadfile1">
-			第二张<input type="file" id="uploadfile2">
+			<label for="uploadfile1">
+				第一张<input type="file" id="uploadfile1">
+			</label>
+			<label for="uploadfile2">
+				第二张<input type="file" id="uploadfile2">
+			</label>
 			<span class="screenshot">截图模式</span>
+			<span class="unscreenshot">退出截图模式</span>
 		</footer>
 		<script>
 			var file1=document.querySelector("#uploadfile1");
@@ -111,6 +129,11 @@
 				document.querySelector(".section").style.borderRadius = 0;
 				document.querySelector(".section").style.border = 0;
 				document.querySelector(".m").style.display = "none";
+			}
+			document.querySelector(".unscreenshot").onclick = () => {
+				document.querySelector(".section").style.borderRadius = "76px";
+				document.querySelector(".section").style.border = "1px solid red";
+				document.querySelector(".m").style.display = "block";
 			}
 		</script>
 	</main>
