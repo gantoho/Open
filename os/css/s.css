@@ -1,0 +1,47 @@
+.s{
+	width: 250px;
+	height: 185px;
+	border-radius: 5px;
+	display: none;
+	position: absolute;
+	background-color: white;
+	z-index: 999;
+	overflow: hidden;
+}
+.s>ul{
+	width: 250px;
+	height: 185px;
+	list-style: none;
+}
+.s>ul>li{
+	width: 250px;
+	height: 30px;
+	font-size: 10px;
+	line-height: 30px;
+	cursor: pointer;
+}
+.s>ul>li:hover{
+	background-color: gainsboro;
+}
+.s>ul>.p{
+	width: 250px;
+	height: 30px;
+	border-bottom: 1px solid #eee;
+}
+.s>ul>li>.span{
+	display: inline-block;
+	width: 30px;
+}
+.s>ul>li>.span1{
+	display: inline-block;
+	font-size: 20px;
+	position: absolute;
+	right: 0px;
+	text-indent: -2rem;
+	color: #999;
+	font-weight: 300;
+}
+.s>img{
+	width: 100%;
+	height: 100%;
+}
