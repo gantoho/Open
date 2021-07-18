@@ -3,22 +3,24 @@ window.onload = function(){
 	let rad = Math.floor(Math.random()*arr.length);
 	let item = document.querySelectorAll(".article");
 	let itemH = item[1].clientHeight;
+	console.log(itemH);
 	(function(){
-		for(let [index,i] of item.entries()){
-			if(item[index].offsetTop-document.documentElement.scrollTop+200 < document.documentElement.clientHeight){
-				item[index].style.visibility = "visible";
-				item[index].classList.add(arr[rad]);
-			}
+	    for(let [index,i] of item.entries()){
+		console.log(item[index].offsetTop,document.documentElement.scrollTop,document.documentElement.clientHeight);
+		if(item[index].offsetTop-document.documentElement.scrollTop+(itemH/2) < document.documentElement.clientHeight){
+		    item[index].style.visibility = "visible";
+		    item[index].classList.add(arr[rad]);
 		}
+	    }
 	})();
 	window.onscroll = function(){
-		for(let [index,i] of item.entries()){
-			//          每个元素距离上方的距离  鼠标滚动了多少距离                  窗口的高度
-			// console.log(item[index].offsetTop,document.documentElement.scrollTop,document.documentElement.clientHeight);
-			if(item[index].offsetTop-document.documentElement.scrollTop+(itemH/2) < document.documentElement.clientHeight){
-				item[index].style.visibility = "visible";
-				item[index].classList.add(arr[rad]);
-			}
+	    for(let [index,i] of item.entries()){
+		//          每个元素距离上方的距离  鼠标滚动了多少距离                  窗口的高度
+		console.log(item[index].offsetTop,document.documentElement.scrollTop,document.documentElement.clientHeight);
+		if(item[index].offsetTop-document.documentElement.scrollTop+(itemH/2) < document.documentElement.clientHeight){
+		    item[index].style.visibility = "visible";
+		    item[index].classList.add(arr[rad]);
 		}
+	    }
 	}
 }
