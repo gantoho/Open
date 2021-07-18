@@ -3,7 +3,6 @@ window.onload = function(){
 	let rad = Math.floor(Math.random()*arr.length);
 	let item = document.querySelectorAll(".article");
 	let itemH = item[1].clientHeight;
-	console.log(itemH);
 	(function(){
 	    for(let [index,i] of item.entries()){
 // 		console.log(item[index].offsetTop,document.documentElement.scrollTop,document.documentElement.clientHeight);
