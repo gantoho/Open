@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>新床参数</title>
-		<link rel="stylesheet" type="text/css" href="https://icon.ganto.cn/g.png"/>
+		<link rel="icon" type="text/css" href="https://icon.ganto.cn/g.png"/>
 		<style type="text/css">
 			*{
 				margin: 0;
@@ -255,8 +255,8 @@
 		<main>
 			<header>
 				<p>注意：数据误差±1厘米</p>
-				<span class="btn1">数据（显示/隐藏）按钮1</span>
-				<span class="btn2">数据（显示/隐藏）按钮2</span>
+				<span class="btn1">床头参数</span>
+				<span class="btn2">床身参数</span>
 			</header>
 			<section>
 				<div class="l">
@@ -274,7 +274,7 @@
 						<i class="y y3">97.5厘米</i>
 					</div>
 				</div>
-				<span class="btn3">数据（显示/隐藏）按钮3</span>
+				<span class="btn3">宽度参数</span>
 				<div class="r">
 					<p>上方视角↓</p>
 					<img src="img/b.png" >
@@ -293,24 +293,32 @@
 				let flag2 = true;
 				let flag3 = true;
 				document.querySelector(".btn1").onclick = function(){
-					let x = document.querySelectorAll(".x");
-					for(let item of x){
-						if(flag1 == true){
-							item.style.visibility = "hidden";
-						}else{
-							item.style.visibility = "visible";
-						}
+					if(flag1 == true){
+						document.querySelector(".x0").style.visibility = "hidden";
+						document.querySelector(".x1").style.visibility = "hidden";
+						document.querySelector(".x2").style.visibility = "hidden";
+						document.querySelector(".y0").style.visibility = "hidden";
+						document.querySelector(".y3").style.visibility = "hidden";
+					}else{
+						document.querySelector(".x0").style.visibility = "visible";
+						document.querySelector(".x1").style.visibility = "visible";
+						document.querySelector(".x2").style.visibility = "visible";
+						document.querySelector(".y0").style.visibility = "visible";
+						document.querySelector(".y3").style.visibility = "visible";
 					}
 					flag1 = !flag1;
 				}
 				document.querySelector(".btn2").onclick = function(){
-					let y = document.querySelectorAll(".y");
-					for(let item of y){
-						if(flag2 == true){
-							item.style.visibility = "hidden";
-						}else{
-							item.style.visibility = "visible";
-						}
+					if(flag2 == true){
+						document.querySelector(".x3").style.visibility = "hidden";
+						document.querySelector(".x4").style.visibility = "hidden";
+						document.querySelector(".y1").style.visibility = "hidden";
+						document.querySelector(".y2").style.visibility = "hidden";
+					}else{
+						document.querySelector(".x3").style.visibility = "visible";
+						document.querySelector(".x4").style.visibility = "visible";
+						document.querySelector(".y1").style.visibility = "visible";
+						document.querySelector(".y2").style.visibility = "visible";
 					}
 					flag2 = !flag2;
 				}
