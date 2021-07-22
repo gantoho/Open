@@ -36,7 +36,7 @@ $(".duyiwuer>ul>li:nth-child(8)").click(function(){
 })
 
 //倒计时
-var isTime = new Date('2020-06-07 00:00:00');//修改结束时间，从现在到你设置的时间的差值
+var isTime = new Date('2022-06-10 00:00:00');//修改结束时间，从现在到你设置的时间的差值
 var isMillis = isTime.getTime() - new Date().getTime();
 var showTime = document.getElementById('showTime');
 if(isMillis > 0) {
