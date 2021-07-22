@@ -13,6 +13,7 @@
 				display: flex;
 				justify-content: center;
 				text-align: center;
+				min-width: 1500px;
 			}
 			main{
 				
@@ -30,17 +31,24 @@
 				width: 300px;
 				height: 80px;
 				box-shadow: 10px 10px 25px #d1d9e6, -10px -10px 15px white;
-				font-size: 20px;
+				font-size: 40px;
 				line-height: 80px;
 				border-radius: 40px;
 				cursor: pointer;
 				margin: 20px 0;
 			}
-			span:hover{
+			.btn1:hover{
+				box-shadow: 10px 10px 16px #d1d9e6 inset, -15px -15px 16px white inset;
+			}
+			.btn2:hover{
 				box-shadow: 10px 10px 16px #d1d9e6 inset, -15px -15px 16px white inset;
 			}
 			.btn3{
-				margin-top: 100px;
+				box-shadow: 10px 10px 16px #d1d9e6 inset, -15px -15px 16px white inset;
+				cursor: not-allowed;
+				color: #0000FF;
+			}
+			section{
 			}
 			section>div{
 				position: relative;
@@ -49,12 +57,6 @@
 				font-size: 20px;
 				font-weight: 900;
 				color: red;
-			}
-			section .l{
-				box-shadow: 0px 10px 50px #eee;
-			}
-			section .r{
-				box-shadow: 0px 10px 50px #eee;
 			}
 			section>div>div{
 				width: 100%;
@@ -75,40 +77,40 @@
 			}
 			.x0{
 				width: 85px;
-				top: 75px;
-				left: 15px;
+				top: 102px;
+				left: 134px;
 			}
 			.x0::before{
 				content: "18厘米";
 			}
 			.x1{
 				width: 103px;
-				top: 190px;
-				left: 15px;
+				top: 217px;
+				left: 134px;
 			}
 			.x1::before{
 				content: "22厘米";
 			}
 			.x2{
 				width: 105px;
-				top: 315px;
-				left: 15px;
+				top: 342px;
+				left: 134px;
 			}
 			.x2::before{
 				content: "20厘米";
 			}
 			.x3{
 				width: 557px;
-				top: 358px;
-				left: 98px;
+				top: 385px;
+				left: 217px;
 			}
 			.x3::before{
 				content: "2米";
 			}
 			.x4{
 				width: 644px;
-				top: 407px;
-				left: 15px;
+				top: 434px;
+				left: 134px;
 			}
 			.x4::before{
 				content: "2米18";
@@ -125,8 +127,8 @@
 			}
 			.y0{
 				height: 310px;
-				top: 14px;
-				left: 137px;
+				top: 41px;
+				left: 256px;
 			}
 			.y0::before{
 				content: "";
@@ -150,8 +152,8 @@
 			}
 			.y1{
 				height: 70px;
-				top: 318px;
-				left: 691px;
+				top: 345px;
+				left: 810px;
 			}
 			.y1::before{
 				content: "";
@@ -175,8 +177,8 @@
 			}
 			.y2{
 				height: 112px;
-				top: 318px;
-				left: 765px;
+				top: 345px;
+				left: 884px;
 			}
 			.y2::before{
 				content: "";
@@ -200,8 +202,8 @@
 			}
 			.y3{
 				height: 395px;
-				top: 52px;
-				left: -25px;
+				top: 79px;
+				left: 94px;
 			}
 			.y3::before{
 				content: "";
@@ -223,45 +225,20 @@
 				bottom: 0px;
 				left: -20px;
 			}
-			.z{
-				display: inline-block;
-				height: 4px;
-				background-color: #FF0000;
-				color: #FF0000;
-				position: absolute;
-				font-style: normal;
-				font-weight: 900;
-				font-size: 20px;
-			}
-			.z0{
-				width: 493px;
-				top: 124px;
-				left: 86px;
-			}
-			.z0::before{
-				content: "1米79";
-			}
-			.z1{
-				width: 493px;
-				top: 324px;
-				left: 88px;
-			}
-			.z1::before{
-				content: "1米79";
-			}
 		</style>
 	</head>
 	<body>
 		<main>
 			<header>
-				<p>注意：数据误差±1厘米内</p>
+				<p>注意：数据误差±1厘米</p>
 				<span class="btn1">床头参数</span>
 				<span class="btn2">床身参数</span>
+				<span class="btn3">床宽1米79</span>
 			</header>
 			<section>
 				<div class="l">
+					<p>侧面视角↓</p>
 					<img src="img/a.png" >
-					<p>侧面视角↑</p>
 					<div class="el">
 						<i class="x x0"></i>
 						<i class="x x1"></i>
@@ -274,15 +251,6 @@
 						<i class="y y3">97.5厘米</i>
 					</div>
 				</div>
-				<span class="btn3">宽度参数</span>
-				<div class="r">
-					<p>上方视角↓</p>
-					<img src="img/b.png" >
-					<div class="er">
-						<i class="z z0"></i>
-						<i class="z z1"></i>
-					</div>
-				</div>
 			</section>
 			<footer></footer>
 		</main>
@@ -291,7 +259,6 @@
 			window.onload = function(){
 				let flag1 = true;
 				let flag2 = true;
-				let flag3 = true;
 				document.querySelector(".btn1").onclick = function(){
 					if(flag1 == true){
 						document.querySelector(".x0").style.visibility = "hidden";
@@ -321,17 +288,6 @@
 						document.querySelector(".y2").style.visibility = "visible";
 					}
 					flag2 = !flag2;
-				}
-				document.querySelector(".btn3").onclick = function(){
-					let z = document.querySelectorAll(".z");
-					for(let item of z){
-						if(flag3 == true){
-							item.style.visibility = "hidden";
-						}else{
-							item.style.visibility = "visible";
-						}
-					}
-					flag3 = !flag3;
 				}
 			}
 		</script>
