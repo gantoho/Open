@@ -1,47 +1,81 @@
 .s{
-	width: 250px;
-	height: 185px;
-	border-radius: 5px;
-	display: none;
+	border-radius: 10px;
 	position: absolute;
-	background-color: white;
+	backdrop-filter: saturate(150%) blur(10px);
+	-webkit-backdrop-filter: saturate(150%) blur(10px);
+	background-color: rgba(32, 32, 32, .9);
 	z-index: 999;
 	overflow: hidden;
+	padding-bottom: 5px;
+	display: none;
+	font-size: 12px;
+	color: white;
+	padding: 5px;
 }
 .s>ul{
-	width: 250px;
-	height: 185px;
+	width: 100%;
 	list-style: none;
 }
 .s>ul>li{
-	width: 250px;
-	height: 30px;
-	font-size: 10px;
-	line-height: 30px;
+	width: 230px;
 	cursor: pointer;
+	position: relative;
+	border-radius: 5px;
+	margin: 5px 2px;
+	padding: 5px 0;
+	text-indent: 2.5em;
 }
 .s>ul>li:hover{
-	background-color: gainsboro;
+	background-color: rgba(60, 60, 60, .5);
 }
-.s>ul>.p{
-	width: 250px;
-	height: 30px;
-	border-bottom: 1px solid #eee;
+.hr{
+	display: block;
+	width: 100%;
+	height: 1px;
+	background-color: #707070;
 }
-.s>ul>li>.span{
-	display: inline-block;
-	width: 30px;
-}
-.s>ul>li>.span1{
-	display: inline-block;
-	font-size: 20px;
+.s>ul>li>.r{
 	position: absolute;
-	right: 0px;
-	text-indent: -2rem;
-	color: #999;
-	font-weight: 300;
+	right: 0;
+}
+.s>ul>li>.r>svg{
+	width: 17px;
+	height: 17px;
 }
 .s>img{
 	width: 100%;
 	height: 100%;
+}
+.terminal::before{
+	content: "";
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	background-image: url(../img/terminal.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 4px;
+}
+.git::before{
+	content: "";
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	background-image: url(../img/git-for-windows.ico);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 4px;
+}
+.vscode::before{
+	content: "";
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	background-image: url(../img/vscode.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 4px;
 }
