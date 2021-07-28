@@ -15,10 +15,7 @@ $(function(){
 		// 	}
 		// })
 		//阻止默认右键点击事件
-		$("main").bind("contextmenu", () => {
-			return false;
-		});
-		$(".s").bind("contextmenu", () => {
+		$("main,.demo,.s,header").bind("contextmenu", () => {
 			return false;
 		});
 		//contextmenu鼠标右键点击事件
@@ -32,7 +29,7 @@ $(function(){
 		$("main").mousedown(() => {
 			$(".s").hide();
 		});
-		$(".p").click(() => {
+		$(".refresh").click(() => {
 			location.reload();
 		});
 		
@@ -62,6 +59,10 @@ $(function(){
 				flag = true;
 			}
 		})
+		
+		let imgUrl = ["../img/unnamed.jpg","../img/unnamed0.jpg","../img/bing20210617.jpg","../img/background.jpg","../img/background_0.jpg","../img/backgroundImg.png","../img/wallhaven-rdglgq.jpg","../img/wallhaven-3z369y.jpg","https://ganto.cn/xer/img/yasuo_yongen.jpg","https://ganto.cn/xer/img/198.jpg","http://qzonestyle.gtimg.cn/qzone/qzactStatics/imgs/20171123181522_c48800.jpg","../img/win10.jpg","../img/win11.jpg"];
+		$(".nextBgImg").click(function(){
+			let numS = Math.floor(Math.random()*imgUrl.length);
+			$("main").css({"background-image":"url(" + imgUrl[numS] + ")"})
+		})
 })
-
-
