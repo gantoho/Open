@@ -60,7 +60,7 @@ $(function(){
 			}
 		})
 		
-		let imgUrl = ["../img/unnamed.jpg","../img/unnamed0.jpg","../img/bing20210617.jpg","../img/background.jpg","../img/background_0.jpg","../img/backgroundImg.png","../img/wallhaven-rdglgq.jpg","../img/wallhaven-3z369y.jpg","https://ganto.cn/xer/img/yasuo_yongen.jpg","https://ganto.cn/xer/img/198.jpg","http://qzonestyle.gtimg.cn/qzone/qzactStatics/imgs/20171123181522_c48800.jpg","../img/win10.jpg","../img/win11.jpg"];
+		let imgUrl = ["https://open.ganto.cn/os/img/unnamed.jpg","https://open.ganto.cn/os/img/unnamed0.jpg","https://open.ganto.cn/os/img/bing20210617.jpg","https://open.ganto.cn/os/img/background.jpg","https://open.ganto.cn/os/img/background_0.jpg","https://open.ganto.cn/os/img/backgroundImg.png","https://open.ganto.cn/os/img/wallhaven-rdglgq.jpg","https://open.ganto.cn/os/img/wallhaven-3z369y.jpg","https://ganto.cn/xer/img/yasuo_yongen.jpg","https://ganto.cn/xer/img/198.jpg","http://qzonestyle.gtimg.cn/qzone/qzactStatics/imgs/20171123181522_c48800.jpg","https://open.ganto.cn/os/img/win10.jpg","https://open.ganto.cn/os/img/win11.jpg"];
 		$(".nextBgImg").click(function(){
 			let numS = Math.floor(Math.random()*imgUrl.length);
 			$("main").css({"background-image":"url(" + imgUrl[numS] + ")"})
