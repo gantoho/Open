@@ -252,6 +252,7 @@ section .demo{
 	height: calc(100% - 88px);
 	overflow: auto;
 	margin-top: 20px;
+    	border-radius: 5px;
 }
 .sec .pc{
 	padding: 20px;
