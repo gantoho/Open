@@ -5,10 +5,6 @@
   bottom: 0;
   left: 0;
   overflow: hidden;
-  background-image: url(http://littlebutterfly.cn/img/th.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   z-index: 999;
 }
 .c0{
@@ -22,7 +18,7 @@
 .c0 div{
   width: 0px;
   height: 50px;
-  background-image: url(suolian.png);
+  background-image: url(../images/suolian.png);
   background-size: contain;
   background-repeat: repeat-x;
   transition: all .5s;
@@ -38,7 +34,7 @@
 .c1 div{
   width: 0px;
   height: 50px;
-  background-image: url(suolian.png);
+  background-image: url(../images/suolian.png);
   background-size: contain;
   background-repeat: repeat-x;
   transition: all .5s;
@@ -54,7 +50,7 @@
 .c2 div{
   width: 0px;
   height: 50px;
-  background-image: url(suolian.png);
+  background-image: url(../images/suolian.png);
   background-size: contain;
   background-repeat: repeat-x;
   transition: all .5s;
@@ -70,7 +66,7 @@
 .c3 div{
   width: 0px;
   height: 50px;
-  background-image: url(suolian.png);
+  background-image: url(../images/suolian.png);
   background-size: contain;
   background-repeat: repeat-x;
   transition: all .5s;
