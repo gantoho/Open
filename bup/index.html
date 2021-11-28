@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>视频进度条生成</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    main{
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+    .in button{
+      height: 20px;
+    }
+    .out{
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 200px;
+      border: 1px solid green;
+      display: flex;
+      justify-content: left;
+      overflow: auto;
+    }
+    .item{
+      background-color: pink;
+      border-right: 1px solid black;
+      padding: 0 10px;
+      line-height: 50px;
+    }
+    .item:last-child{
+      border-right: 0;
+    }
+    .item p{
+      text-align: center;
+    }
+    .item input{
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="in">
+      <label for="a">总时长
+        <input type="text" id="a" placeholder="总时长" value="00:01:00">
+      </label>
+      <button class="add">添加段落</button>
+      <button class="su">生成</button>
+    </div>
+    <div class="out">
+      <div class="item">
+        <p contenteditable="true">前言</p>
+        <input type="text" class="k" placeholder="开始" value="00:00:00">
+        <input type="text" class="j" placeholder="结束" value="00:00:30">
+      </div>
+    </div>
+  </main>
+  
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+  <script>
+    /**
+     * 1.
+     * 输入总时长 时分秒 00:01:00
+     * 输入每段的开始-结束 00:00:00-00:00:30 00:00:30-00:01:00
+     * 
+     * 2.
+     * 新建段落
+     * 删除段落
+     * 
+     * 3.
+     * 生成可视频或者图片
+     * 
+     */
+
+    $(".in .add").click(function(){
+      $(".out").append('<div class="item"><p contenteditable="true">输入标题</p><input type="text" class="k" placeholder="开始"><input type="text" class="j" placeholder="结束"></div>');
+    })
+    $(".in .su").click(function(){
+      let tim = (new Date("2021-01-01 " + $("#a").val()).getTime() - new Date("2021-01-01 00:00:00").getTime()) / 1000;
+      console.log(tim);
+      let items = $(".out .item");
+      // console.log(items.length);
+      for(let i = 0; i <= items.length - 1; i++){
+        // console.log(i);
+        let kV = $(".out .item").eq(i).children(".k").val();
+        let jV = $(".out .item").eq(i).children(".j").val();
+        // console.log(tim, kV, jV);
+        // console.log((new Date("2021-01-01 "+jV).getTime() - new Date("2021-01-01 "+kV).getTime()) / 1000);
+        let bi = (new Date("2021-01-01 "+jV).getTime() - new Date("2021-01-01 "+kV).getTime()) / 1000 / tim * 100 + "%";
+        console.log(tim, (new Date("2021-01-01 "+jV).getTime() - new Date("2021-01-01 "+kV).getTime()) / 1000, bi);
+        $(".out .item").eq(i).width(bi);
+        $(".out .item input").hide();
+        $(".out, .out .item").height(50);
+      }
+    })
+  </script>
+</body>
+</html>
